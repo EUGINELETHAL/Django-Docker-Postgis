@@ -22,7 +22,7 @@ Uses the default Django development server.
 1. Update the environment variables in the *docker-compose.yml* and *.env.dev* files.
 1. Build the images and run the containers:
 
-    ```sh
+    ```
     $ docker-compose up -d --build
     ```
 
@@ -35,9 +35,11 @@ Uses the default Django development server.
 4.To test out the geodjango functionalities run ,  
 
     ```sh
-    $ docker compose exec web python manage.py createsuperuser
+    docker compose exec web python manage.py createsuperuser
     ```
-then go the admin url to create a hotel .
+then go http://localhost:8000/admin/ to create a hotel .
+
+
     
     
    
