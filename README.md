@@ -30,6 +30,9 @@ Uses the default Django development server.
     ```sh
     $ docker-compose up -d --build
     ```
+   To test out the geodjango functionalities, run *docker compose exec web python manage.py createsuperuser* to create a superuser , then go the admin url to create a hotel .
+    
+    
    
 
 ### Production
