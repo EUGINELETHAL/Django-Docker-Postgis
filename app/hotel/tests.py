@@ -4,13 +4,10 @@ from django.test import TestCase
 from django.contrib.gis.geos import Point
 import pytest
 
-# from app.upload.models import Hotel
 
 from .models import Hotel
 
-
-
-# @pytest.mark.django_db
+@pytest.mark.django_db
 def test_create_shop():
     longitude = -80.191_788
     latitude = 25.761_681

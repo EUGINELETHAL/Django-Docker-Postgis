@@ -2,7 +2,6 @@ from django.shortcuts import render
 from django.core.files.storage import FileSystemStorage
 from django.contrib.gis.geos import Point
 
-from .models import Hotel
 
 
 def image_upload(request):
@@ -11,9 +10,6 @@ def image_upload(request):
         fs = FileSystemStorage()
         filename = fs.save(image_file.name, image_file)
         image_url = fs.url(filename)
-        print(image_url)
-        
-        print(shop1)
         
         return render(request, "upload.html", {
             "image_url": image_url
