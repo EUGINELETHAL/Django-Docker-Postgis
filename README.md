@@ -5,6 +5,11 @@
 
 
 ## Want to use this project?
+The db container runs PostGIS. It uses a named volume to persist PostgreSQL data in between container restarts.
+
+The dev web container runs the Django development server, built using   Dockerfile while the production web contianer is built using the custom Dockerfile.prod Dockerfile
+
+The migrations container simply runs the apps migrations and then terminates - with depends_on used to ensure that migrations run after the hdatabase server starts and before the web server.
 
 ### Development
 
