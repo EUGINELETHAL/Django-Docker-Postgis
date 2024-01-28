@@ -5,11 +5,14 @@
 
 
 ## Want to use this project?
+Some features of this project:
+
+Uses GeoDjango, so needs GDAL etc for the Django app plus a PostgreSQL server running PostGIS
+Already has a Dockerfile used for the production deployment, but needed a separate one for the development environment
 The db container runs PostGIS. It uses a named volume to persist PostgreSQL data in between container restarts.
 
 The dev web container runs the Django development server, built using   Dockerfile while the production web contianer is built using the custom Dockerfile.prod Dockerfile
 
-The migrations container simply runs the apps migrations and then terminates - with depends_on used to ensure that migrations run after the hdatabase server starts and before the web server.
 
 ### Development
 
@@ -24,6 +27,10 @@ Uses the default Django development server.
     ```
 
     Test it out at [http://localhost:8000](http://localhost:8000). The "app" folder is mounted into the container and your code changes apply automatically.
+    ```sh
+    $ docker-compose up -d --build
+    ```
+   
 
 ### Production
 
