@@ -27,10 +27,13 @@ Uses the default Django development server.
     ```
 
     Test it out at [http://localhost:8000](http://localhost:8000). The "app" folder is mounted into the container and your code changes apply automatically.
+   
     ```sh
     $ docker-compose up -d --build
     ```
+    
 4.To test out the geodjango functionalities run ,  
+
     ```sh
     $ docker compose exec web python manage.py createsuperuser
     ```
